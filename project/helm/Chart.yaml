@@ -1,0 +1,8 @@
+name: techtrends
+description: TechTrends Project for Udacity/Swift Java with DevOps Nanodegree
+keywords:
+- techtrends
+version: 1.0.0
+maintainers:
+- name: rljdavies
+  url: https://github.com/rljdavies
