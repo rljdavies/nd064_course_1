@@ -121,9 +121,14 @@ if __name__ == "__main__":
    logger_formatter=logging.Formatter('%(levelname)s:%(name)s:%(asctime)s %(message)s', datefmt='[%d/%b/%Y %H:%M:%S]')
    logger.setLevel(logging.DEBUG)
 
-   logger_handler = logging.StreamHandler(sys.stdout)
-   logger_handler.setLevel(logging.DEBUG)
-   logger_handler.setFormatter(logger_formatter)
-   logger.addHandler(logger_handler)
+   logger_debug_handler = logging.StreamHandler(sys.stdout)
+   logger_debug_handler.setLevel(logging.DEBUG)
+   logger_debug_handler.setFormatter(logger_formatter)
+   logger.addHandler(logger_debug_handler)
+   
+   logger_error_handler = logging.StreamHandler(sys.stderr)
+   logger_error_handler.setLevel(logging.ERROR)
+   logger_error_handler.setFormatter(logger_formatter)
+   logger.addHandler(logger_error_handler)
     
    app.run(host='0.0.0.0', port='3111')
