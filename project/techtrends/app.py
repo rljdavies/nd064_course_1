@@ -36,11 +36,6 @@ def get_post_count():
 def get_db_connection_count():
    return connection_count
 
-# Function to format logger message  
-def logger_message(msg):
-  d = time.asctime() 
-  return f"{d}, {msg}"
-
 # Define the Flask application
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your secret key'
